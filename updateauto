@@ -1,0 +1,17 @@
+#/bin/bash
+
+
+# Automatizar a correção do erro 'NO_PUKKEY' com o seguinte comando abaixo:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CHAVE
+# CODIGO ABAIXO FOI A TENTATIVA DE CORREÇÃO:
+#COMMAND_RESULT=$(sudo apt-get update)
+# sudo apt-get update > /home/eron/Documentos/textTest.txt
+#$(sudo apt-get update) | grep "NO_PUBKEY"
+
+
+sudo apt-get update
+echo "Packages are synchronized"
+echo "Packages will upgrade"
+sudo apt-get -y upgrade
+echo "Packages upgrade"
+
